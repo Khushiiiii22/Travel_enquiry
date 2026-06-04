@@ -1,0 +1,6 @@
+{
+  "name": "Nilhans Travels",
+  "description": "Premium travel agency platform & dedicated flight ticket enquiry system for Nilhans.com",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
