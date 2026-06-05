@@ -324,7 +324,7 @@ export default function SharedDetails({ enquiry, initialFocusedPart, onBackToHom
             </div>
 
             <div className="space-y-1">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">WhatsApp / Mobile</span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Mobile Number</span>
               <a 
                 href={`tel:${enquiry.mobileNumber}`}
                 className="text-sm font-bold text-slate-850 hover:underline block font-mono"

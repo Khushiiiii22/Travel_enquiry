@@ -57,7 +57,7 @@ export default function EnquiryForm({ prefilledDestination, clearPrefilledDestin
   // Additional states
   const [flexibleDates, setFlexibleDates] = useState(false);
   const [specialRequests, setSpecialRequests] = useState('');
-  const [budgetRange, setBudgetRange] = useState('₹20,000 - ₹50,000');
+  const [budgetRange, setBudgetRange] = useState('$800 - $1,500');
 
   // Load prefilled destination if chosen from homepage
   useEffect(() => {
@@ -93,7 +93,7 @@ export default function EnquiryForm({ prefilledDestination, clearPrefilledDestin
       return;
     }
     if (!mobileNumber.trim()) {
-      alert('Please write down your active WhatsApp/Mobile number');
+      alert('Please enter your mobile number');
       return;
     }
     if (!emailAddress.trim() || !emailAddress.includes('@')) {
@@ -127,24 +127,6 @@ export default function EnquiryForm({ prefilledDestination, clearPrefilledDestin
     onSuccessSubmit(); // Trigger navbar counter increments / list reloads
   };
 
-  // Helper trigger to instantly create a ready message link to WhatsApp directly
-  const createWhatsAppDirectLink = () => {
-    const text = `*New Nilhans Flight Enquiry* \n` +
-      `----------------------------\n` +
-      `✈️ *From:* ${fromCity.toUpperCase()}\n` +
-      `📍 *To:* ${toCity.toUpperCase()}\n` +
-      `📅 *Trip Type:* ${tripType}\n` +
-      `🛫 *Departure:* ${departureDate}\n` +
-      `${tripType === 'Round Trip' ? `🛬 *Return:* ${returnDate}\n` : ''}` +
-      `💎 *Cabin class:* ${cabinClass}\n` +
-      `👥 *Passengers:* Adults: ${adults}, Kids: ${children}, Infants: ${infants}\n` +
-      `👤 *Client:* ${fullName}\n` +
-      `📞 *Mobile:* ${mobileNumber}\n` +
-      `💬 *Special:* ${specialRequests || 'None'}`;
-    
-    return `https://wa.me/13072841315?text=${encodeURIComponent(text)}`;
-  };
-
   if (isSubmitted) {
     return (
       <div className="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8 font-sans" id="enquiry-success-block">
@@ -172,20 +154,18 @@ export default function EnquiryForm({ prefilledDestination, clearPrefilledDestin
           {/* Quick Lead Action Panels */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-6 text-left">
             <div className="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-2">
-              <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm uppercase font-mono">
+              <div className="flex items-center gap-2 text-amber-400 font-bold text-sm uppercase font-mono">
                 <Smartphone className="w-4 h-4" />
-                <span>Express WhatsApp Desk</span>
+                <span>Secure Hotline Desk</span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Skip standard queue. Tap the button below to text your ticket routing parameters directly to our duty terminal desk.
+                Skip the ticket queue. Call our direct agent desk immediately to speak with a travel representative regarding your flight request.
               </p>
               <a
-                href={createWhatsAppDirectLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full mt-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold uppercase rounded items-center justify-center gap-2 transition-colors duration-200"
+                href="tel:+13072841315"
+                className="inline-flex w-full mt-3 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold uppercase rounded items-center justify-center gap-2 transition-all duration-200"
               >
-                <span>Instantly Chat On WhatsApp</span>
+                <span>Call +1 (307) 284-1315</span>
               </a>
             </div>
 
@@ -509,7 +489,7 @@ export default function EnquiryForm({ prefilledDestination, clearPrefilledDestin
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5 flex flex-col">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Mobile / WhatsApp Number</label>
+                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Mobile Number</label>
                   <input
                     type="tel"
                     placeholder="e.g. +1 (307) 284-1315"
@@ -608,11 +588,11 @@ export default function EnquiryForm({ prefilledDestination, clearPrefilledDestin
                     className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs text-slate-800 focus:outline-none"
                     id="input-budget"
                   >
-                    <option value="₹15,000 - ₹30,000">₹15,000 - ₹30,000 (Budget Domestic)</option>
-                    <option value="₹30,000 - ₹60,000">₹30,000 - ₹60,000 (Standard)</option>
-                    <option value="₹60,000 - ₹1,20,000">₹60,000 - ₹1,20,000 (Premium International)</option>
-                    <option value="₹1,20,000 - ₹2,50,000">₹1,20,000 - ₹2,50,000 (Business Fare)</option>
-                    <option value="₹2,50,000+">₹2,50,000+ (First Class or Family group)</option>
+                    <option value="$300 - $800">$300 - $800 (Budget Domestic)</option>
+                    <option value="$800 - $1,500">$800 - $1,500 (Standard)</option>
+                    <option value="$1,500 - $3,000">$1,500 - $3,000 (Premium International)</option>
+                    <option value="$3,000 - $5,000">$3,000 - $5,000 (Business Fare)</option>
+                    <option value="$5,000+">$5,000+ (First Class or Family group)</option>
                   </select>
                 </div>
               </div>

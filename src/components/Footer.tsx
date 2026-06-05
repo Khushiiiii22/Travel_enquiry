@@ -7,7 +7,7 @@ import React from 'react';
 import { Plane, Star, ShieldCheck, Mail, Phone, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
-  setActiveTab: (tab: 'home' | 'enquiry' | 'admin') => void;
+  setActiveTab: (tab: 'home' | 'enquiry') => void;
 }
 
 export default function Footer({ setActiveTab }: FooterProps) {
@@ -133,7 +133,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
                 <span className="font-mono">info@nilhans.com</span>
               </a>
               <p className="leading-normal">
-                Head Desk: 703 Johnson Ln, Sugar Land, TX 77479, United States.<br />
+                703 Johnson Ln, Sugar Land, TX 77479, United States.<br />
                 Licensed Air Consolidation Travel Partner.
               </p>
             </div>
@@ -163,8 +163,6 @@ export default function Footer({ setActiveTab }: FooterProps) {
           </div>
 
           <div className="flex flex-wrap items-center gap-4 text-[11px]">
-            <button onClick={() => setActiveTab('admin')} className="hover:text-amber-400">Admin Login</button>
-            <span className="text-slate-750">|</span>
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSeDuUeiXGObY1myP3QVpVA4uSkMZnEjAkH4xYAgpQ16r8sTLA/viewform?usp=header"
               target="_blank"

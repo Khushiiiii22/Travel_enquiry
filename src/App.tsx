@@ -9,19 +9,16 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Destinations from './components/Destinations';
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
 import EnquiryForm from './components/EnquiryForm';
-import AdminPanel from './components/AdminPanel';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import WhatsAppChat from './components/WhatsAppChat';
 import SharedDetails from './components/SharedDetails';
 import { getEnquiries } from './db';
 import { Phone, Plane } from 'lucide-react';
 import { FlightEnquiry } from './types';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'enquiry' | 'admin'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'enquiry'>('home');
   const [prefilledDestination, setPrefilledDestination] = useState('');
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -122,7 +119,6 @@ export default function App() {
                 <Services setActiveTab={setActiveTab} />
                 <Destinations onSelectDestination={handleSelectDestination} />
                 <WhyChooseUs />
-                <Testimonials />
               </div>
             )}
 
@@ -135,24 +131,15 @@ export default function App() {
                 />
               </div>
             )}
-
-            {activeTab === 'admin' && (
-              <div className="py-8 bg-slate-50 min-h-[90vh]">
-                <AdminPanel refreshTrigger={refreshTrigger} />
-              </div>
-            )}
           </>
         )}
       </main>
 
-      {/* Contact Form and Map details (Hidden in raw Admin workspace for neatness) */}
-      {!sharedEnquiry && activeTab !== 'admin' && <ContactSection />}
+      {/* Contact Form and Map details */}
+      {!sharedEnquiry && <ContactSection />}
 
-      {/* Corporate footer details (Hidden in CRM context) */}
-      {!sharedEnquiry && activeTab !== 'admin' && <Footer setActiveTab={setActiveTab} />}
-
-      {/* Floating high-conversion Chat widget */}
-      <WhatsAppChat />
+      {/* Corporate footer details */}
+      {!sharedEnquiry && <Footer setActiveTab={setActiveTab} />}
 
       {/* Mobile-Only Sticky Call & Quick Enquiry Bar */}
       <div className="fixed bottom-0 inset-x-0 bg-slate-900 border-t border-slate-800 p-3 flex md:hidden items-center justify-between gap-3 z-30" id="mobile-sticky-dock">

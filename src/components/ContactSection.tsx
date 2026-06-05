@@ -62,7 +62,7 @@ export default function ContactSection() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="font-bold text-sm text-slate-100 uppercase tracking-wider">Corporate Headquarters</h4>
+                  <h4 className="font-bold text-sm text-slate-100 uppercase tracking-wider">Address</h4>
                   <p className="text-xs text-slate-300 leading-normal">
                     Nilhans Travels Private Limited<br />
                     703 Johnson Ln,<br />
@@ -80,10 +80,7 @@ export default function ContactSection() {
                 <div className="space-y-1 text-xs">
                   <h4 className="font-bold text-sm text-slate-100 uppercase tracking-wider">Immediate Assistance</h4>
                   <a href="tel:+13072841315" className="block text-slate-300 hover:text-amber-400 font-mono font-medium py-0.5">
-                    +1 (307) 284-1315 (Direct Support Desk)
-                  </a>
-                  <a href="tel:+13072841315" className="block text-slate-400 hover:text-amber-400 font-mono font-normal">
-                    +1 (307) 284-1315 (Corporate Desk)
+                    +1 (307) 284-1315
                   </a>
                 </div>
               </div>
@@ -95,28 +92,10 @@ export default function ContactSection() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div className="space-y-1 text-xs">
-                  <h4 className="font-bold text-sm text-slate-100 uppercase tracking-wider">Email Communications</h4>
+                  <h4 className="font-bold text-sm text-slate-100 uppercase tracking-wider">Email Communication</h4>
                   <a href="mailto:info@nilhans.com" className="block text-slate-300 hover:text-amber-400 font-mono py-0.5">
                     info@nilhans.com
                   </a>
-                  <a href="mailto:info@nilhans.com" className="block text-slate-400 hover:text-amber-400 font-mono">
-                    info@nilhans.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-cyan-500/10 text-cyan-400 rounded-xl">
-                  <Clock className="w-6 h-6" />
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-bold text-sm text-slate-100 uppercase tracking-wider">Working Hours</h4>
-                  <p className="text-xs text-slate-300">
-                    Monday &mdash; Saturday: 09:00 AM &mdash; 08:00 PM IST<br />
-                    Sunday: Emergency Support via WhatsApp Only
-                  </p>
                 </div>
               </div>
             </div>
@@ -219,24 +198,6 @@ export default function ContactSection() {
                 <span>Open Google Form</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-            </div>
-
-            {/* Google Maps Visual Indicator */}
-            <div className="border border-slate-800 bg-slate-900 p-4 rounded-3xl text-xs space-y-3 relative overflow-hidden">
-              <span className="text-[10px] uppercase font-bold text-amber-500 block font-mono">Live Desk Location map</span>
-              
-              {/* Simulated static custom styled map for premium look */}
-              <div className="w-full h-32 bg-slate-950 rounded-xl relative overflow-hidden flex items-center justify-center border border-slate-800 group">
-                <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                <div className="text-center space-y-1 relative z-10">
-                  <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-white mx-auto animate-bounce font-bold">📍</div>
-                  <span className="block font-bold text-[10px] text-slate-300 font-sans">Sugar Land, Texas, USA</span>
-                </div>
-              </div>
-
-              <span className="block text-[10px] text-slate-400">
-                Secure SSL Ready servers guarantee 256-bit SSL encryption client-side.
-              </span>
             </div>
 
           </div>

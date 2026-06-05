@@ -66,20 +66,20 @@ export default function WhyChooseUs() {
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                <span>Full GST tax corporate invoicing support</span>
+                <span>Full corporate travel invoicing support</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                <span>Immediate post-booking ticket changes via WhatsApp</span>
+                <span>Immediate post-booking ticket changes and direct support</span>
               </li>
             </ul>
 
             <div className="pt-6">
               <a 
-                href="whatsapp://send?phone=13072841315"
+                href="tel:+13072841315"
                 className="inline-flex items-center gap-3 text-sm font-bold text-amber-400 hover:text-amber-300 group"
               >
-                <span>Instant Advisory Chat</span>
+                <span>Instant Advisory Hotline</span>
                 <span className="w-6 h-6 rounded-full bg-amber-500/10 group-hover:bg-amber-500/20 flex items-center justify-center transition-colors">→</span>
               </a>
             </div>

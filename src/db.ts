@@ -25,7 +25,7 @@ const SEED_ENQUIRIES: FlightEnquiry[] = [
     infants: 0,
     flexibleDates: true,
     specialRequests: 'Window seat and vegetarian meals requested for all passengers.',
-    budgetRange: 'INR 1,50,000 - 2,00,000',
+    budgetRange: 'USD 2,000 - 3,000',
     status: 'New',
     submittedAt: '2026-06-04T10:15:30Z',
     notes: 'Premium lead. Needs Emirates quotation specifically. Vegetarian meal requested.'
@@ -46,7 +46,7 @@ const SEED_ENQUIRIES: FlightEnquiry[] = [
     infants: 0,
     flexibleDates: false,
     specialRequests: 'Extra legroom seat. Student traveling for Fall intake.',
-    budgetRange: 'INR 80,000 - 1,00,000',
+    budgetRange: 'USD 1,000 - 1,500',
     status: 'In Progress',
     submittedAt: '2026-06-03T14:30:22Z',
     notes: 'Sent initial comparison sheet of Air India and British Airways.'
@@ -68,7 +68,7 @@ const SEED_ENQUIRIES: FlightEnquiry[] = [
     infants: 0,
     flexibleDates: true,
     specialRequests: 'Honeymoon couple. Requesting cozy hotels & visa packages together.',
-    budgetRange: 'INR 1,20,000 - 1,50,000',
+    budgetRange: 'USD 1,500 - 2,500',
     status: 'Contacted',
     submittedAt: '2026-06-02T08:12:11Z',
     notes: 'Called. They also want customized 7-day Thailand/Bali honeymoon packages.'
@@ -90,7 +90,7 @@ const SEED_ENQUIRIES: FlightEnquiry[] = [
     infants: 1,
     flexibleDates: false,
     specialRequests: 'Family holiday. Requires kid-friendly recommendations and direct flight if possible.',
-    budgetRange: 'INR 2,00,000 - 2,50,000',
+    budgetRange: 'USD 3,000 - 4,000',
     status: 'Booked',
     submittedAt: '2026-05-28T16:45:00Z',
     notes: 'Booked Thai Airways TG-338. Total invoice paid.'
@@ -110,7 +110,7 @@ const SEED_ENQUIRIES: FlightEnquiry[] = [
     infants: 0,
     flexibleDates: true,
     specialRequests: 'Cheapest available fare.',
-    budgetRange: 'INR 15,000 - 20,000',
+    budgetRange: 'USD 300 - 500',
     status: 'Lost',
     submittedAt: '2026-05-25T11:20:00Z',
     notes: 'Lead lost. Client found alternative option online.'

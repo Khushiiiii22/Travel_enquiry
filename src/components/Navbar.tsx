@@ -7,8 +7,8 @@ import React, { useState } from 'react';
 import { Menu, X, Plane, Phone, Compass, Shield, Database } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'home' | 'enquiry' | 'admin';
-  setActiveTab: (tab: 'home' | 'enquiry' | 'admin') => void;
+  activeTab: 'home' | 'enquiry';
+  setActiveTab: (tab: 'home' | 'enquiry') => void;
   enquiryCount: number;
 }
 
@@ -62,25 +62,6 @@ export default function Navbar({ activeTab, setActiveTab, enquiryCount }: Navbar
                 </button>
               );
             })}
-
-            {/* Admin Dashboard view */}
-            <button
-              onClick={() => setActiveTab('admin')}
-              className={`flex items-center gap-2 text-sm font-semibold tracking-wide transition-all py-1.5 px-3 rounded-lg ${
-                activeTab === 'admin'
-                  ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
-                  : 'text-slate-300 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-transparent'
-              }`}
-              id="nav-link-admin"
-            >
-              <Database className="w-4 h-4 text-amber-500" />
-              <span>Admin Panel</span>
-              {enquiryCount > 0 && (
-                <span className="bg-amber-500 text-slate-950 text-[10px] font-bold px-1.5 py-0.5 rounded-full font-mono">
-                  {enquiryCount}
-                </span>
-              )}
-            </button>
           </nav>
 
           {/* Call Now and CTA Quick Enquiry */}
@@ -151,29 +132,6 @@ export default function Navbar({ activeTab, setActiveTab, enquiryCount }: Navbar
               </button>
             );
           })}
-
-          <button
-            onClick={() => {
-              setActiveTab('admin');
-              setMobileMenuOpen(false);
-            }}
-            className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-semibold transition-all ${
-              activeTab === 'admin'
-                ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30 font-bold'
-                : 'text-slate-300 hover:bg-slate-900 hover:text-white border border-transparent'
-            }`}
-            id="drawer-btn-admin"
-          >
-            <div className="flex items-center gap-3">
-              <Database className="w-5 h-5 text-amber-500" />
-              <span>Admin Dashboard</span>
-            </div>
-            {enquiryCount > 0 && (
-              <span className="bg-amber-500 text-slate-950 text-xs font-bold px-2 py-0.5 rounded-full font-mono">
-                {enquiryCount}
-              </span>
-            )}
-          </button>
 
           <div className="pt-4 border-t border-slate-900 flex flex-col gap-3">
             <a 
